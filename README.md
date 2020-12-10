@@ -20,6 +20,7 @@ Note: The game will not let players join multiple times
 Note: The game will not start with only one player
 Sub-Commands:
 !qb prompts : Can be used in two ways
+
 1. When used 15 seconds after the end of a game, the bot will pull up a list of all prompts entered that game, and will allow the players to "save" them
 2. When used outside of a running instance of a game, the bot pulls up the list of saved prompts on the specific server
 !qb random : Gives the player a random prompt that they can use instead of creating their own
@@ -29,9 +30,11 @@ The game operates in a text channel within the server
 A player must use !game to initialize a game
 Players will use the !join command to join the game
 Once everyone has entered the game, a user will enter !start
+
 Phase 1: Prompts
 Each player will receive a private message from QuipBot that they will have to navigate into
-The player will have 20 seconds to either: 
+The player will have 20 seconds to either:
+
 1. Type in their own response within the private message channel that the bot will record
 2. Use !random to get the bot to create a random prompt for them instead
 Once 20 seconds has passed, the prompts phase ends
@@ -40,6 +43,7 @@ The player will remain in the private message channel
 Each player will receive two prompts to respond to in 40 seconds
 They will type it in as a text reply
 Once the time is over, players will head back to the initial text channel where the game was running for voting
+
 Phase 3: Voting
 Each prompt that the players created will be judged with their two corresponding responses by players
 Responses will be initially anonymous 
@@ -47,6 +51,7 @@ Each voting period for each response will be 10 seconds
 Players vote by clicking on the appropriate reaction button
 After each “dual” of prompt+responses, scores will be shown
 The players who created the responses will now be revealed and the round specific winner will be declared
+
 Phase 4: Scoreboard
 After each prompt was judged, a final scoreboard will be shown
 Users have the option to use !prompts to save the prompts generated during the game
