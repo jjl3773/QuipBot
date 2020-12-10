@@ -5,8 +5,10 @@ QuipBot can be added to a Discord server through the website https://top.gg/
 This can be done by searching for QuipBot on the site, and clicking the “invite” button
 A specific server needs to be selected from the pop-up page’s dropdown menu
 Making a server in Discord is simple: go to the left hand side of the screen, find a button with a “+”, and click “create my own”
+
 Note: Permissions need to be authorized for the bot, and don’t forget to accept the reCaptcha pop-up
 Check the server, and QuipBot should be active (use !help to check what commands are available).
+
 Note: There may be issues surrounding QuipBot staying online 24/7
  
 Bot Commands:
