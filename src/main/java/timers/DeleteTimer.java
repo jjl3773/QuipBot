@@ -11,7 +11,6 @@ public class DeleteTimer extends TimerTask {
 
     @Override
     public void run() {
-        System.out.println("game deleted");
         Main.removeGame(game);
     }
 }
