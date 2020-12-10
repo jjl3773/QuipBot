@@ -167,7 +167,6 @@ public class GameListener extends ListenerAdapter {
                             }
                         }
                         if (!alreadyIn) {
-                            System.out.println("check");
                             channel.retrieveMessageById(games.getMessageId()).queue((message) -> {
                                 String oldPlayers = message.getEmbeds().get(0).getFields().get(0).getValue();
                                 EmbedBuilder builder = new EmbedBuilder(IntroEmbed);
