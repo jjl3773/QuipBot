@@ -92,6 +92,7 @@ public class GameListener extends ListenerAdapter {
 
 
                 if (event.getMessage().getContentRaw().equals("!qb prompts")) {
+                    //If using this code, replace the following path with the full path of the ServerPrompts.csv file
                     List<String[]> promptList = readCSV(new File("/Users/jason/IdeaProjects/discord/src/main/ServerPrompts.csv"));
                     boolean isIn = false;
                     for (String[] servers: promptList) {
@@ -141,6 +142,7 @@ public class GameListener extends ListenerAdapter {
                     if (!currentGame.hasInputtedQuestion(event.getAuthor().getId())) {
                         if (event.getMessage().getContentRaw().equals("!qb random")) {
                             Random random = new Random(System.currentTimeMillis());
+                            //If using this code, replace the following path with the full path of the GeneralPrompts.csv file
                             List<String[]> prompts = readCSV(new File("/Users/jason/IdeaProjects/discord/src/main/GeneralPrompts.csv"));
                             thisPlayer.setPrompt(prompts.get(random.nextInt(prompts.size()))[0]);
                         } else {
