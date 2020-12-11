@@ -96,6 +96,7 @@ public class Game {
     public void phase1() {
         Timer startTimer = new Timer();
         Random random = new Random(System.currentTimeMillis());
+        //If using this code, replace the following path with the full path of the GeneralPrompts.csv file
         File generalPrompt = new File("/Users/jason/IdeaProjects/discord/src/main/GeneralPrompts.csv");
         List<String[]> prompts = readCSV(generalPrompt);
 
@@ -156,7 +157,7 @@ public class Game {
     //post: initiates "phase 3" of the current game, displaying the current scoreboard
     public void phase3() {
         Timer timer = new Timer();
-        channel.sendFile(new File("/Users/jason/Pictures/scoreboard.png")).queue();
+        channel.sendMessage("http://www.lilynow.com/wp-content/uploads/2020/12/scoreboardnew.png").queue();
 
         List<Player> players = new ArrayList<>(pointRecord.keySet());
         List<List<Player>> scores1 = new ArrayList<>();
