@@ -8,11 +8,14 @@ public class StartTimer extends TimerTask {
     private MessageChannel channel;
     private Game game;
 
+    //constructor of the "StartTimer" class
+    //takes in a Game "game" and MessageChannel "channel"
     public StartTimer(Game game, MessageChannel channel) {
         this.channel = channel;
         this.game = game;
     }
 
+    //initiates "phase2" of the current game
     @Override
     public void run() {
         channel.sendMessage("http://www.lilynow.com/wp-content/uploads/2020/12/votingTime2.png").queue();
