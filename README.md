@@ -1,6 +1,6 @@
 # QuipBot
 
-Configuration:
+##Configuration:
 QuipBot can be added to a Discord server through the website https://top.gg/.
 
 This can be done by searching for QuipBot on the site, and clicking the “invite” button
@@ -14,27 +14,33 @@ Check the server, and QuipBot should be active (use !help to check what commands
 
 Note: There may be issues surrounding QuipBot staying online 24/7
  
-Bot Commands:
+###Bot Commands:
 Typing in commands (words that begin with an !qb) into the server chat is how the user interacts with QuipBot
 Main Commands:
-- !qb help : Brings up the list of usable commands
-- !qb game : Initializes a QuipBot game
-- !qb join : Allows other players to join the game
-*Note: The game will not let players join multiple times*
-- !qb start : Begins the QuipBot game
-*Note: The game will not start with only one player*
+- `!qb help` : Brings up the list of usable commands
+- `!qb game` : Initializes a QuipBot game
+- `!qb join` : Allows other players to join the game
 
-Sub-Commands:
-- !qb prompts : Can be used in two ways
+**Note: The game will not let players join multiple times**
+- `!qb start` : Begins the QuipBot game
 
-1. When used 15 seconds after the end of a game, the bot will pull up a list of all prompts entered that game, and will allow the players to "save" them
-2. When used outside of a running instance of a game, the bot pulls up the list of saved prompts on the specific server
-!qb random : Gives the player a random prompt that they can use instead of creating their own
-Gameplay:
-Setup:
+**Note: The game will not start with only one player**
+
+###Sub-Commands:
+- `!qb prompts` : Can be used in two ways
+
+ 1. When used 15 seconds after the end of a game, the bot will pull up a list of all prompts entered that game, and will allow the players to "save" them
+ 2. When used outside of a running instance of a game, the bot pulls up the list of saved prompts on the specific server
+
+- `!qb random` : Gives the player a random prompt that they can use instead of creating their own
+
+##Gameplay:
+
+###Setup:
+
 The game operates in a text channel within the server 
-A player must use !game to initialize a game
-Players will use the !join command to join the game
+A player must use `!qb` game to initialize a game
+Players will use the `!qb` join command to join the game
 Once everyone has entered the game, a user will enter !start
 
 Phase 1: Prompts
@@ -42,7 +48,7 @@ Each player will receive a private message from QuipBot that they will have to n
 The player will have 20 seconds to either:
 
 1. Type in their own response within the private message channel that the bot will record
-2. Use !random to get the bot to create a random prompt for them instead
+2. Use `!qb random` to get the bot to create a random prompt for them instead
 Once 20 seconds has passed, the prompts phase ends
 Phase 2: Responses
 The player will remain in the private message channel
@@ -67,7 +73,7 @@ After each prompt was judged, a final scoreboard will be shown
 Users have the option to use !prompts to save the prompts generated during the game
 Another game can be created after this
  
-Recommendations:
+##Recommendations:
 We believe that the game is the most entertaining when players use a voice chat simultaneously when playing
 
 A group of 3-8 is an optimal amount of players, although there is no player max limit
