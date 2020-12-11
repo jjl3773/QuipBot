@@ -78,4 +78,4 @@ A group of 3-8 is an optimal amount of players, although there is no player max 
 Discord emojis and emotes can be used in prompt/response creation
 
 #### Final Note:
-If using this code, make sure to replace all references to local folders (located within the `GameListener.java` and `SaveTimer.java` with the appropriate *full path*)
+If using this code for your own bot, make sure to replace all references to local folders with the appropriate *full path*. You will need to download the `GeneralPrompts.csv`, create a new `ServerPrompts.csv`, and a `token.txt` (in which to store your bot's token). These references are located within the `GameListener.java` and `SaveTimer.java` files.
