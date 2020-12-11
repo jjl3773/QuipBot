@@ -18,7 +18,7 @@ Main Commands:
 - `!qb game` : Initializes a QuipBot game
 - `!qb join` : Allows other players to join the game
 
-**Note: The game will not let players join multiple times**
+<fontsize = "1">**Note: The game will not let players join multiple times**</font>
 - `!qb start` : Begins the QuipBot game
 
 **Note: The game will not start with only one player**
@@ -26,8 +26,8 @@ Main Commands:
 ### Sub-Commands:
 - `!qb prompts` : Can be used in two ways
 
- 1. When used 15 seconds after the end of a game, the bot will pull up a list of all prompts entered that game, and will allow the players to "save" them
- 2. When used outside of a running instance of a game, the bot pulls up the list of saved prompts on the specific server
+    1. When used 15 seconds after the end of a game, the bot will pull up a list of all prompts entered that game, and will allow the players to "save" them
+    2. When used outside of a running instance of a game, the bot pulls up the list of saved prompts on the specific server
 
 - `!qb random` : Gives the player a random prompt that they can use instead of creating their own
 
@@ -61,9 +61,9 @@ After each propmt + response pair, scores will be shown. The players who created
 #### Phase 3: Scoreboard
 After each prompt was judged, a scoreboard will be shown. 
 
-If the current round was not the final round, then the players will be prompted to return to their dm's for another round of prompts and responses.
+- If the current round was not the final round, then the players will be prompted to return to their dm's for another round of prompts and responses.
 
-If the current round was the final round, players have the option to use `!qb prompts` to save the prompts generated during the game. After this, another game can be initiated without issue.
+- If the current round was the final round, players have the option to use `!qb prompts` to save the prompts generated during the game. After this, another game can be initiated without issue.
  
 ## Recommendations:
 We believe that the game is the most entertaining when players use a voice chat simultaneously when playing.
