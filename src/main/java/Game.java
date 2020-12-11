@@ -29,8 +29,6 @@ public class Game {
     private int roundsLeft;
     private List<String> cumulativeQuestions;
 
-    //testing fields:
-
     private List<Player> gamePlayers;
     private List<String> questionList;
     private Map<Player, Integer> pointRecord;
