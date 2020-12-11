@@ -16,10 +16,14 @@ public class ShowTimer extends TimerTask {
     private MessageChannel channel;
     private Player[] previousUsers;
 
+    //constructor of the "ShowTimer" class
+    //takes in a Game "game", MessageChannel "channel", and List of questions
     public ShowTimer(Game game, MessageChannel channel, List<String> questions) {
         this(game, channel, questions, "", null);
     }
 
+    //constructor of the "ShowTimer" class
+    //takes in a Game, MessageChannel, List of Strings, String, and array of Players
     public ShowTimer(Game game, MessageChannel channel, List<String> questions, String previousId, Player[] previousUsers) {
         this.questions = questions;
         this.game = game;
@@ -28,6 +32,9 @@ public class ShowTimer extends TimerTask {
         this.previousUsers = previousUsers;
     }
 
+    //post: if there was a previous round, the winner of that round is decided
+    //displays a formatted combination of a question and its responses with the authors anonymous.
+    //If there are no question, initiates "phase3" of the game
     @Override
     public void run() {
         Timer timer = new Timer();
