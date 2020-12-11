@@ -1,6 +1,6 @@
 # QuipBot
 
-##Configuration:
+## Configuration:
 QuipBot can be added to a Discord server through the website https://top.gg/.
 
 This can be done by searching for QuipBot on the site, and clicking the “invite” button
@@ -14,7 +14,7 @@ Check the server, and QuipBot should be active (use !help to check what commands
 
 Note: There may be issues surrounding QuipBot staying online 24/7
  
-###Bot Commands:
+### Bot Commands:
 Typing in commands (words that begin with an !qb) into the server chat is how the user interacts with QuipBot
 Main Commands:
 - `!qb help` : Brings up the list of usable commands
@@ -26,7 +26,7 @@ Main Commands:
 
 **Note: The game will not start with only one player**
 
-###Sub-Commands:
+### Sub-Commands:
 - `!qb prompts` : Can be used in two ways
 
  1. When used 15 seconds after the end of a game, the bot will pull up a list of all prompts entered that game, and will allow the players to "save" them
@@ -34,29 +34,30 @@ Main Commands:
 
 - `!qb random` : Gives the player a random prompt that they can use instead of creating their own
 
-##Gameplay:
+## Gameplay:
 
-###Setup:
+### Setup:
 
 The game operates in a text channel within the server 
 A player must use `!qb` game to initialize a game
 Players will use the `!qb` join command to join the game
 Once everyone has entered the game, a user will enter !start
 
-Phase 1: Prompts
+#### Phase 0: Prompts
 Each player will receive a private message from QuipBot that they will have to navigate into
 The player will have 20 seconds to either:
 
 1. Type in their own response within the private message channel that the bot will record
 2. Use `!qb random` to get the bot to create a random prompt for them instead
 Once 20 seconds has passed, the prompts phase ends
-Phase 2: Responses
+
+#### Phase 1: Responses
 The player will remain in the private message channel
 Each player will receive two prompts to respond to in 40 seconds
 They will type it in as a text reply
 Once the time is over, players will head back to the initial text channel where the game was running for voting
 
-Phase 3: Voting
+#### Phase 2: Voting
 Each prompt that the players created will be judged with their two corresponding responses by players
 
 Responses will be initially anonymous 
@@ -68,12 +69,12 @@ Players vote by clicking on the appropriate reaction button
 After each “dual” of prompt+responses, scores will be shown. 
 The players who created the responses will now be revealed and the round specific winner will be declared
 
-Phase 4: Scoreboard
+#### Phase 3: Scoreboard
 After each prompt was judged, a final scoreboard will be shown
 Users have the option to use !prompts to save the prompts generated during the game
 Another game can be created after this
  
-##Recommendations:
+## Recommendations:
 We believe that the game is the most entertaining when players use a voice chat simultaneously when playing
 
 A group of 3-8 is an optimal amount of players, although there is no player max limit
