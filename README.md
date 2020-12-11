@@ -17,14 +17,15 @@ Note: There may be issues surrounding QuipBot staying online 24/7
 Bot Commands:
 Typing in commands (words that begin with an !qb) into the server chat is how the user interacts with QuipBot
 Main Commands:
-!qb help : Brings up the list of usable commands
-!qb game : Initializes a QuipBot game
-!qb join : Allows other players to join the game
-Note: The game will not let players join multiple times
-!qb start : Begins the QuipBot game
-Note: The game will not start with only one player
+- !qb help : Brings up the list of usable commands
+- !qb game : Initializes a QuipBot game
+- !qb join : Allows other players to join the game
+*Note: The game will not let players join multiple times*
+- !qb start : Begins the QuipBot game
+*Note: The game will not start with only one player*
+
 Sub-Commands:
-!qb prompts : Can be used in two ways
+- !qb prompts : Can be used in two ways
 
 1. When used 15 seconds after the end of a game, the bot will pull up a list of all prompts entered that game, and will allow the players to "save" them
 2. When used outside of a running instance of a game, the bot pulls up the list of saved prompts on the specific server
