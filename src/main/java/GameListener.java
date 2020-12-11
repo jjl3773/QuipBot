@@ -13,17 +13,20 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.*;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.Timer;
 
 
 public class GameListener extends ListenerAdapter {
     private List<Game> currentGames;
 
-    public GameListener(JDABuilder builder) {
+    //constructor of the "GameListener" class
+    public GameListener() {
         this.currentGames = new ArrayList<>();
     }
 
+    //pre: a MessageReceivedEvent event
+    //post: if the event represents an applicable command, the command
+    //will be executed
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
         MessageChannel channel = event.getChannel();
@@ -151,9 +154,9 @@ public class GameListener extends ListenerAdapter {
                 if (event.getMessage().getContentRaw().equals("!qb prompts")) {
                     channel.sendMessage("Here are the prompts used this game! React to any of the prompts" +
                             " you would like to save").queue();
-                    channel.sendMessage("```css\n[Note, the saving mechanism will terminate after 15 seconds]```").queue();
+                    channel.sendMessage("```css\n[Note, the saving mechanism will terminate after 20 seconds]```").queue();
                     currentGame.displaySavablePrompts();
-                    startTimer.schedule(new SaveTimer(this, currentGame, channel, event.getGuild().getId()), 15000);
+                    startTimer.schedule(new SaveTimer(this, currentGame, channel, event.getGuild().getId()), 20000);
                 }
             }
         } else {
@@ -161,8 +164,8 @@ public class GameListener extends ListenerAdapter {
                 for (Game games: currentGames) {
                     if (event.getChannel().getId().equals(games.getChannelId())) {
                         boolean alreadyIn = false;
-                        for (User user: games.getPlayers()) {
-                            if (user.getId().equals(event.getAuthor().getId())) {
+                        for (Player player: games.getGamePlayers()) {
+                            if (player.getUser().getId().equals(event.getAuthor().getId())) {
                                 alreadyIn = true;
                             }
                         }
@@ -182,7 +185,7 @@ public class GameListener extends ListenerAdapter {
             }
 
             if (event.getMessage().getContentRaw().equals("!qb start")) {
-                if (currentGame.getPlayers().size() >= 2) {
+                if (currentGame.getGamePlayers().size() >= 2) {
                     currentGame.setAdding(false);
                     currentGame.phase0();
                 } else {
@@ -192,6 +195,8 @@ public class GameListener extends ListenerAdapter {
         }
     }
 
+    //pre: a String "messageId", a MessageChannel "channel", and a User "user"
+    //post: initiates a new game
     public void addNewGame(String messageId, MessageChannel channel, User user) {
         Game newGame = new Game(this, messageId, channel);
         newGame.setAdding(true);
@@ -199,6 +204,8 @@ public class GameListener extends ListenerAdapter {
         this.currentGames.add(newGame);
     }
 
+    //pre: a String "id"
+    //post: if that "id" corresponds to a current game, that game will be returned
     public Game getGame(String id) {
         for (Game games: currentGames) {
             if (games.getChannelId().equals(id)) {
@@ -208,6 +215,8 @@ public class GameListener extends ListenerAdapter {
         return null;
     }
 
+    //pre: takes in a File "file" that should be of CSV format
+    //post: returns the contents of the file as a list
     public List<String[]> readCSV(File file) {
         try {
             FileReader filereader = new FileReader(file);
