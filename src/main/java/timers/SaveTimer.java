@@ -77,6 +77,7 @@ public class SaveTimer extends TimerTask {
     //post: writes those prompts into a csv file and sorts it based on the serverId
     public void writeCSV(List<String> prompts, String serverId) {
         boolean added = false;
+        //If using this code, replace the following path with the full path of the ServerPrompts.csv file
         List<ArrayList<String>> fullData = readCSV(new File("/Users/jason/IdeaProjects/discord/src/main/ServerPrompts.csv"));
         for (ArrayList<String> ServerList : fullData) {
             if (ServerList.get(0).equals(serverId)) {
@@ -99,6 +100,7 @@ public class SaveTimer extends TimerTask {
         }
 
         try {
+            //If using this code, replace the following path with the full path of the ServerPrompts.csv file
             FileWriter outputfile = new FileWriter(new File("/Users/jason/IdeaProjects/discord/src/main/ServerPrompts.csv"));
 
             //distinctive seperation character
