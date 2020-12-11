@@ -17,6 +17,8 @@ public class SaveTimer extends TimerTask {
     private GameListener Main;
     private String serverId;
 
+    //constructor of the "SaveTimer" class
+    //takes in a GameListener "Main", Game "game", MessageChannel "channel", and String "serverId"
     public SaveTimer(GameListener Main, Game game, MessageChannel channel, String serverId) {
         this.Main = Main;
         this.game = game;
@@ -24,6 +26,7 @@ public class SaveTimer extends TimerTask {
         this.serverId = serverId;
     }
 
+    //post: saves the marked prompts to a csv file
     @Override
     public void run() {
         List<String> promptsToSave = new ArrayList<>();
@@ -46,6 +49,8 @@ public class SaveTimer extends TimerTask {
         Main.removeGame(game);
     }
 
+    //pre: takes in a File "file" that should be of CSV format
+    //post: returns the contents of the file as a list
     public List<ArrayList<String>> readCSV(File file) {
         List<ArrayList<String>> fullData = new ArrayList<>();
         try {
@@ -68,6 +73,8 @@ public class SaveTimer extends TimerTask {
         return fullData;
     }
 
+    //pre: takes in a List of prompts and a String "serverId"
+    //post: writes those prompts into a csv file and sorts it based on the serverId
     public void writeCSV(List<String> prompts, String serverId) {
         boolean added = false;
         List<ArrayList<String>> fullData = readCSV(new File("/Users/jason/IdeaProjects/discord/src/main/ServerPrompts.csv"));
