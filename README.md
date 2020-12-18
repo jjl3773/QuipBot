@@ -1,7 +1,7 @@
 # QuipBot
  
 ### Bot Commands:
-Typing in commands (words that begin with an `!qb`) into the server chat is how the user interacts with QuipBot
+Typing in commands (words that begin with an `!qb`) into the server chat is how the user can interact with QuipBot
 Main Commands:
 - `!qb help` : Brings up the list of usable commands
 - `!qb game` : Initializes a QuipBot game
