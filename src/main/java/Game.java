@@ -88,7 +88,7 @@ public class Game {
             };
             startTimer.schedule(reminderTask, 60000);
         }
-        startTimer.schedule(new QuestionTimer(this), 2000);
+        startTimer.schedule(new QuestionTimer(this), 20000);
         isRecordingPrompts = true;
     }
 
@@ -129,7 +129,7 @@ public class Game {
             });
         }
 
-        startTimer.schedule(new StartTimer(this, channel), 4000);
+        startTimer.schedule(new StartTimer(this, channel), 40000);
         isRecordingResponses = true;
     }
 
