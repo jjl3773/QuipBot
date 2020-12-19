@@ -10,7 +10,7 @@ public class main {
         File file = new File("/Users/jason/IdeaProjects/discord/src/main/token.txt");
         String token = new String(Files.readAllBytes(file.toPath()));
         builder.setToken(token);
-        GameListener Main = new GameListener(builder);
+        GameListener Main = new GameListener();
         builder.addEventListeners(Main);
         builder.build();
     }
